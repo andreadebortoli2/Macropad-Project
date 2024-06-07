@@ -2,8 +2,12 @@ from pynput import keyboard
 from pynput.keyboard import Key, Controller
 import subprocess
 import time
+import username
 
 keyboard = Controller()
+
+user_name = username.user_name
+vs_code_path = "C:/Users/{}/AppData/Local/Programs/Microsoft VS Code/bin/Code.cmd".format(user_name)
 
 
 def start_shortcut_program():
@@ -30,7 +34,7 @@ def start_shortcut_program():
         if old_project_type.upper() == 'L':
 
             # open vs code
-            subprocess.run("C:/Users/andre/AppData/Local/Programs/Microsoft VS Code/bin/Code.cmd")
+            subprocess.run(vs_code_path)
             # open terminal
             keyboard.press(Key.ctrl)
             keyboard.tap(key='ò')
@@ -51,7 +55,7 @@ def start_shortcut_program():
         elif old_project_type.upper() == 'E':
         
             # open vs code
-            subprocess.run("C:/Users/andre/AppData/Local/Programs/Microsoft VS Code/bin/Code.cmd")
+            subprocess.run(vs_code_path)
             # open folder
             keyboard.press(Key.ctrl)
             keyboard.tap(key='k')
@@ -88,14 +92,14 @@ def start_shortcut_program():
             
             if new_project_type.upper() == 'V':
                 # open vs code
-                subprocess.run("C:/Users/andre/AppData/Local/Programs/Microsoft VS Code/bin/Code.cmd")
+                subprocess.run(vs_code_path)
                 # open terminal
                 keyboard.press(Key.ctrl)
                 keyboard.tap(key='ò')
                 keyboard.release(Key.ctrl)
                 # navigate to folder
                 time.sleep(3)
-                keyboard.type('cd "C:\\Users\\andre\\OneDrive\\Desktop\\Coding\\Boolean\\JS"')
+                keyboard.type('cd "C:\\Users\\{}\\OneDrive\\Desktop\\Coding\\Boolean\\JS"'.format(user_name))
                 keyboard.tap(Key.enter)
                 # start installation vue vite projects with repository_title
                 time.sleep(1)
@@ -105,7 +109,7 @@ def start_shortcut_program():
                     
             elif new_project_type.upper() == 'L':
                 # open vs code
-                subprocess.run("C:/Users/andre/AppData/Local/Programs/Microsoft VS Code/bin/Code.cmd")
+                subprocess.run(vs_code_path)
                 # open terminal
                 keyboard.press(Key.ctrl)
                 keyboard.tap(key='ò')
@@ -121,7 +125,7 @@ def start_shortcut_program():
                 keyboard.tap(Key.enter)
                 # open laravel-notes.txt
                 time.sleep(1)
-                subprocess.Popen(["C:/Program Files/WindowsApps/Microsoft.WindowsNotepad_11.2402.22.0_x64__8wekyb3d8bbwe/Notepad/Notepad.exe", "C:\\Users\\andre\\OneDrive\\Desktop\\Coding\\appunti\\laravel-notes.txt"])
+                subprocess.Popen(["C:/Program Files/WindowsApps/Microsoft.WindowsNotepad_11.2402.22.0_x64__8wekyb3d8bbwe/Notepad/Notepad.exe", "C:\\Users\\{}\\OneDrive\\Desktop\\Coding\\appunti\\laravel-notes.txt".format(user_name)])
                 # open mamp and close pop-up page
                 time.sleep(1)
                 subprocess.Popen("C:/MAMP/MAMP.exe")

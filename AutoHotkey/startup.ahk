@@ -1,7 +1,7 @@
 ﻿<^<+<!F1::	; Lctrl + Lshift + Lalt + F1 
 {
 	; run vs code project shortcut
-    Run "C:\Users\andre\OneDrive\Desktop\Coding\MacroPad\Python-3.12.3\dist\main.exe"
+    Run "C:\Users\andre\OneDrive\Desktop\Coding\Macropad-Project\Python-3.12.3\dist\main.exe"
 }
 
 <^<+<!F2::	; Lctrl + Lshift + Lalt + F2

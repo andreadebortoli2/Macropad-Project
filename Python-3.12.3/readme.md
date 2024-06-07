@@ -25,5 +25,6 @@
         - open notepad file with installation snippets
         - open mamp and close pop-up page
 
-# Notes
-control your privacy policy to run correctly vs code
+# Notes:
+- control your privacy policy to run correctly vs code
+- create a username.py file copying username-example.py and edit the variable user-name with your system name to complete the path
