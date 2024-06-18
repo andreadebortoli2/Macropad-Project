@@ -134,7 +134,7 @@ macro7 = simple_key_sequence(
 keyboard.keymap = [
     #layer 0 base
     [
-     KC.FD(1),         macro1,
+     macro1,         KC.FD(1),
      KC.MB_LMB,     KC.MB_RMB,
      macro2,      screeenshot,
     ],
