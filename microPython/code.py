@@ -140,7 +140,7 @@ keyboard.keymap = [
     ],
     #layer 1
     [
-     KC.FD(0),     macro3,
+     macro3,     KC.FD(0),
      macro4,       macro5,
      macro6,       macro7,   
     ],
